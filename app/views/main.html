@@ -1,0 +1,26 @@
+<div class="jumbotron">
+  <h1>'Allo, 'Allo!</h1>
+  <p class="lead">
+    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+    Always a pleasure scaffolding your apps.
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+</div>
+<div data-ng-show="error">
+	{{error}}
+</div>
+<div class="row marketing" data-ng-app="string">
+	<form data-ng-submit="creatBlogs()">
+		Title<input type="text" data-ng-model="title"><br>
+		Content<textarea data-ng-model="content"></textarea>
+		<input type="submit" value="Send">
+	</form>
+</div>
+<br>
+<div data-ng-repeat="value in awesomeThings | filter:{title:search}">
+	title : {{value.title}}<br>
+	content : {{value.content}}<br>
+	post_by : {{value.post_by}}<br>
+	<br><br>
+</div>
+Filter : <input data-ng-model="search">
